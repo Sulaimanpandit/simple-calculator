@@ -9,6 +9,7 @@ const operations = ["+", "-", "*", "/"] as const;
 function addToMemory(item: number | typeof operations[number]) {
     if (currentResult.value !== null) {
         resetMemory();
+
     }
     const lastElement = memory.value.at(-1)?.toString();
     if (typeof lastElement === 'undefined') {
@@ -98,7 +99,6 @@ function resetMemory() {
     currentResult.value = null;
     error.value = "";
 }
-
 </script>
 <template>
     <div class="h-content container mx-auto bg-gray-200 border w-[400px] mt-12 rounded shadow-xl">
